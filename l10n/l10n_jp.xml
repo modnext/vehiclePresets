@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="車両プリセット" />
+    <e k="vehiclePresets_presetName" v="プリセット名" />
+    <e k="vehiclePresets_presets" v="プリセット" />
+    <e k="vehiclePresets_preset" v="プリセット" />
+    <e k="vehiclePresets_current" v="現在" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="プリセットを保存" />
+    <e k="vehiclePresets_saveCurrentConfig" v="現在の設定を保存" />
+    <e k="vehiclePresets_loadSelected" v="読み込む" />
+    <e k="vehiclePresets_deletePreset" v="削除" />
+    <e k="vehiclePresets_overwrite" v="上書き" />
+    <e k="vehiclePresets_openInShop" v="開く" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="保存されたプリセットはまだありません" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="どの車両にもプリセットは保存されていません" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="プリセット「%s」を削除しますか？" />
+    <e k="vehiclePresets_overwriteConfirm" v="プリセット「%s」を現在の設定で上書きしますか？" />
+  </elements>
+</l10n>

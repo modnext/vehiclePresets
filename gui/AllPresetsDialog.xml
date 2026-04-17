@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+  <GuiElement profile="newLayer" />
+  <Bitmap profile="dialogFullscreenBg" />
+
+  <GuiElement profile="vehiclePresetsAllDialogContainer">
+    <ThreePartBitmap profile="fs25_dialogBgMiddle" />
+    <ThreePartBitmap profile="fs25_dialogBgTop" />
+    <ThreePartBitmap profile="fs25_dialogBgBottom" />
+
+    <!-- Content -->
+    <GuiElement profile="fs25_dialogContentContainer" id="contentContainer">
+      <Bitmap profile="fs25_dialogLine" id="topLineLeft" position="0 45px" />
+      <Bitmap profile="fs25_dialogLineRight" id="topLineRight" position="0 45px" />
+      <Text profile="fs25_dialogTitle" id="headerText" text="$l10n_vehiclePresets_presets" position="0 60px" />
+
+      <!-- List Container -->
+      <GuiElement profile="vehiclePresetsAllListContainer">
+        <Text profile="vehiclePresetsAllEmptyText" id="emptyText" text="$l10n_vehiclePresets_noPresetsAnywhere" />
+
+        <!-- Presets List -->
+        <SmoothList profile="vehiclePresetsAllList" id="presetsList" onDoubleClick="onDoubleClickPreset" listSectionHeader="section">
+          <ListItem profile="fs25_shopListItem" name="preset">
+            <Bitmap profile="fs25_shopListItemBackground" />
+            <Bitmap profile="fs25_shopListItemImage" name="vehicleIcon" />
+            <Text profile="fs25_shopListItemTitle" name="presetName" />
+            <Text profile="fs25_shopListItemCategory" name="vehicleName" />
+          </ListItem>
+          <ListItem profile="vehiclePresetsAllListSection" name="section">
+            <Text profile="vehiclePresetsAllListSectionTitle" name="title" />
+          </ListItem>
+        </SmoothList>
+
+        <ThreePartBitmap profile="vehiclePresetsAllListSliderBox">
+          <Slider profile="fs25_listSlider" dataElementId="presetsList" />
+        </ThreePartBitmap>
+      </GuiElement>
+    </GuiElement>
+
+    <!-- Footer Buttons -->
+    <BoxLayout profile="fs25_dialogButtonBox" id="buttonsBox">
+      <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="backButton">
+        <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+      </Button>
+      <Button profile="buttonOK" text="$l10n_vehiclePresets_openInShop" onClick="onClickOpen" id="openButton" />
+    </BoxLayout>
+  </GuiElement>
+
+  <GUIProfiles>
+    <Profile name="vehiclePresetsAllDialogContainer" extends="emptyPanel" with="anchorMiddleCenter">
+      <size value="1100px 640px" />
+    </Profile>
+    <Profile name="vehiclePresetsAllListContainer" extends="emptyPanel" with="anchorBottomCenter">
+      <position value="10px 0" />
+      <size value="1000px 560px" />
+    </Profile>
+
+    <!-- Empty State -->
+    <Profile name="vehiclePresetsAllEmptyText" extends="fs25_textDefault" with="anchorMiddleCenter">
+      <size value="500px 40px" />
+      <textAlignment value="center" />
+      <textSize value="18px" />
+      <textColor value="$preset_fs25_colorGreyText" />
+    </Profile>
+
+    <!-- Preset List -->
+    <Profile name="vehiclePresetsAllList" extends="fs25_shopList" with="anchorStretchingYStretchingX">
+      <position value="-15px 0" />
+      <absoluteSizeOffset value="-30px 0" />
+      <numLateralItems value="4" />
+    </Profile>
+    <Profile name="vehiclePresetsAllListSliderBox" extends="fs25_listSliderBox" with="anchorStretchingYRight">
+      <position value="7px 0" />
+      <absoluteSizeOffset value="0 60px" />
+    </Profile>
+
+    <!-- List Section -->
+    <Profile name="vehiclePresetsAllListSection" extends="emptyPanel" with="anchorTopStretchingX">
+      <height value="80px" />
+    </Profile>
+    <Profile name="vehiclePresetsAllListSectionTitle" extends="fs25_textDefault" with="anchorTopLeft">
+      <size value="500px 50px" />
+      <position value="0px -18px" />
+      <textSize value="22px" />
+      <textBold value="true" />
+      <textUpperCase value="true" />
+      <textOffset value="15px 0px" />
+    </Profile>
+  </GUIProfiles>
+</GUI>

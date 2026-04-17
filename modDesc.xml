@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="107">
+  <author>aaw3k</author>
+  <version>1.0.0.0</version>
+
+  <title>
+    <en>Vehicle Presets</en>
+    <de>Fahrzeug-Voreinstellungen</de>
+    <fr>Préréglages De Véhicules</fr>
+    <pl>Gotowe Konfiguracje Pojazdów</pl>
+    <ru>Пресеты Транспортных Средств</ru>
+  </title>
+
+  <description>
+    <en><![CDATA[
+Add a touch of convenience to your game by saving your favorite vehicle configurations. Instead of manually configuring complex setups with colors, wheel brands, and engine options every time you buy a vehicle, you can now save them as presets for quick and easy access.
+
+Features:
+- Save up to 10 customized presets per vehicle directly from the shop configuration screen.
+- Supported configurations include base variants, multiple custom colors, and material changes.
+- Instantly apply, overwrite, or delete your saved configurations.
+- Browse all accumulated presets organized by vehicle in the global browser.
+- Automatically removes presets for uninstalled mod vehicles.
+
+Hotkeys:
+- Press 'X' to open the "All Presets" browser directly from the store pages.
+- Press 'X' to open the "Presets" dialog in the shop configuration screen.
+
+For more info, bug reports, or to contribute, check out GitHub (modnext/vehiclePresets).
+]]></en>
+    <de><![CDATA[
+Bringe etwas mehr Komfort in dein Spiel, indem du deine bevorzugten Fahrzeugkonfigurationen speicherst. Anstatt bei jedem Fahrzeugkauf komplexe Setups mit Farben, Reifenmarken und Motoroptionen manuell durchzuführen, kannst du diese nun als Voreinstellungen (Presets) für einen schnellen und einfachen Zugriff speichern.
+
+Funktionen:
+- Speichere bis zu 10 eigene Presets pro Fahrzeug direkt im Shop-Konfigurationsbildschirm.
+- Unterstützte Konfigurationen sind Grundbausteine, jegliche Farbanpassungen und Materialänderungen.
+- Wende sofort deine gespeicherten Konfigurationen an, überschreibe oder lösche sie.
+- Durchschaut alle deine gesammelten Presets, sortiert nach Fahrzeugen, im globalen Browser.
+- Entfernt automatisch Presets für deinstallierte Mod-Fahrzeuge.
+
+Tastenkombinationen:
+- Drücke 'X', um den "Alle Presets"-Browser direkt aus dem Menü zu öffnen.
+- Drücke 'X', um den "Presets"-Dialog im Shop-Konfigurationsbildschirm zu öffnen.
+
+Für mehr Infos, Fehlermeldungen oder kleine Beiträge schau einfach auf GitHub vorbei (modnext/vehiclePresets).
+]]></de>
+    <fr><![CDATA[
+Ajoutez une touche de confort à votre jeu en sauvegardant vos configurations de véhicules préférées. Au lieu de configurer manuellement des paramétrages complexes avec des couleurs, des marques de pneus et des options de moteur à chaque fois que vous achetez un véhicule, vous pouvez désormais les sauvegarder en tant que préréglages pour un accès rapide et facile.
+
+Fonctionnalités :
+- Sauvegardez jusqu'à 10 préréglages personnalisés par véhicule directement depuis l'écran de configuration.
+- Les configurations prises en charge incluent les variantes de base, les couleurs personnalisées et les matériaux.
+- Appliquez, écrasez ou supprimez instantanément vos configurations.
+- Parcourez tous vos préréglages enregistrés, triés par véhicule, dans le navigateur global.
+- Supprime automatiquement les préréglages des véhicules de mods désinstallés.
+
+Raccourcis clavier :
+- Appuyez sur 'X' pour ouvrir le navigateur "Préréglages" directement depuis les pages de la boutique.
+- Appuyez sur 'X' pour ouvrir la boîte de dialogue "Préréglages" dans l'écran de configuration.
+
+Pour plus d'infos, signaler un bug ou apporter votre aide, rendez-vous sur GitHub (modnext/vehiclePresets).
+]]></fr>
+    <pl><![CDATA[
+Dodaj trochę wygody do swojej rozgrywki, zapisując ulubione konfiguracje pojazdów. Zamiast za każdym razem ręcznie dobierać skomplikowane zestawy kolorów, marek opon i opcji silnika przy zakupie pojazdu, możesz teraz zapisać je jako gotowe konfiguracje (presety), aby mieć do nich szybki i łatwy dostęp.
+
+Funkcje:
+- Zapisz do 10 własnych presetów na każdy pojazd bezpośrednio w ekranie konfiguracji w sklepie.
+- Zapisywane konfiguracje obejmują warianty ogólne, wszystkie customowe kolory i zmiany materiałów.
+- Błyskawicznie wczytuj, nadpisuj oraz usuwaj swoje konfiguracje.
+- Przeglądaj utworzone presety rozdzielone na poszczególne pojazdy w globalnej liście.
+- Automatycznie usuwa presety dla pojazdów z odinstalowanych modów.
+
+Skróty klawiszowe:
+- Wciśnij 'X', aby otworzyć przeglądarkę "Wszystkich Presetów" prosto ze stron sklepu.
+- Wciśnij 'X', aby otworzyć okno presetów w ekranie konfiguracji pojazdu.
+
+Więcej informacji, zgłaszanie błędów czy pomoc w rozwoju znajdziecie na moim GitHubie (modnext/vehiclePresets).
+]]></pl>
+    <ru><![CDATA[Добавьте немного удобства в свою игру, сохраняя ваши любимые конфигурации транспортных средств. Вместо того чтобы вручную настраивать сложные параметры с цветами, марками шин и вариантами двигателей каждый раз при покупке техники, теперь вы можете сохранить их как пресеты для быстрого и удобного доступа.
+
+Особенности:
+- Сохраняйте до 10 пользовательских пресетов на каждое транспортное средство прямо на экране конфигурации.
+- Поддерживаемые настройки включают базовые конфигурации, пользовательские цвета и материалы.
+- Мгновенно применяйте, перезаписывайте или удаляйте сохраненные конфигурации.
+- Просматривайте все накопленные пресеты, отсортированные по транспортным средствам в глобальном браузере.
+- Автоматически удаляет пресеты для техники из удаленных модов.
+
+Горячие клавиши:
+- Нажмите «X», чтобы открыть браузер «Все пресеты» прямо со страниц магазина.
+- Нажмите «X», чтобы открыть диалоговое окно «Пресеты» на экране конфигурации.
+
+Для получения дополнительной информации, сообщений об ошибках или участия загляните на GitHub (modnext/vehiclePresets).
+]]></ru>
+  </description>
+
+  <l10n filenamePrefix="l10n/l10n" />
+
+  <iconFilename>icon_vehiclePresets.dds</iconFilename>
+  <multiplayer supported="true" />
+
+  <extraSourceFiles>
+    <sourceFile filename="scripts/VehiclePresetsSystem.lua" />
+    <sourceFile filename="scripts/gui/VehiclePresetsDialog.lua" />
+    <sourceFile filename="scripts/gui/AllPresetsDialog.lua" />
+    <sourceFile filename="scripts/extensions/ShopConfigScreenExtension.lua" />
+    <sourceFile filename="scripts/extensions/ShopMenuExtension.lua" />
+  </extraSourceFiles>
+</modDesc>

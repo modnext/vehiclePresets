@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="Predefinições de Veículo" />
+    <e k="vehiclePresets_presetName" v="Nome da Predefinição" />
+    <e k="vehiclePresets_presets" v="Predefinições" />
+    <e k="vehiclePresets_preset" v="Predefinição" />
+    <e k="vehiclePresets_current" v="Atual" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="Salvar Predef." />
+    <e k="vehiclePresets_saveCurrentConfig" v="Salvar Config. Atual" />
+    <e k="vehiclePresets_loadSelected" v="Carregar" />
+    <e k="vehiclePresets_deletePreset" v="Apagar" />
+    <e k="vehiclePresets_overwrite" v="Substituir" />
+    <e k="vehiclePresets_openInShop" v="Abrir" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="Nenhuma predefinição salva ainda" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="Nenhuma predefinição salva para veículos" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="Apagar predefinição '%s'?" />
+    <e k="vehiclePresets_overwriteConfirm" v="Substituir predefinição '%s' pela configuração atual?" />
+  </elements>
+</l10n>

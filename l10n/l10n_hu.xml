@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="Jármű Előbeállítások" />
+    <e k="vehiclePresets_presetName" v="Előbeállítás Neve" />
+    <e k="vehiclePresets_presets" v="Előbeállítások" />
+    <e k="vehiclePresets_preset" v="Előbeállítás" />
+    <e k="vehiclePresets_current" v="Jelenlegi" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="Előbeállítás Mentése" />
+    <e k="vehiclePresets_saveCurrentConfig" v="Jelenlegi Konfig Mentése" />
+    <e k="vehiclePresets_loadSelected" v="Betöltés" />
+    <e k="vehiclePresets_deletePreset" v="Törlés" />
+    <e k="vehiclePresets_overwrite" v="Felülírás" />
+    <e k="vehiclePresets_openInShop" v="Megnyitás" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="Nincsenek mentett előbeállítások" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="Egyetlen járműhöz sincs mentve előbeállítás" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="Törli a(z) '%s' előbeállítást?" />
+    <e k="vehiclePresets_overwriteConfirm" v="Felülírja a(z) '%s' előbeállítást a jelenlegi konfiggal?" />
+  </elements>
+</l10n>

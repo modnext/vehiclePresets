@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+  <GuiElement profile="newLayer" />
+  <Bitmap profile="dialogFullscreenBg" />
+
+  <GuiElement profile="vehiclePresetsDialogContainer">
+    <ThreePartBitmap profile="fs25_dialogBgMiddle" />
+    <ThreePartBitmap profile="fs25_dialogBgTop" />
+    <ThreePartBitmap profile="fs25_dialogBgBottom" />
+
+    <!-- Content -->
+    <GuiElement profile="fs25_dialogContentContainer" id="contentContainer">
+      <Bitmap profile="fs25_dialogLine" id="topLineLeft" position="0 45px" />
+      <Bitmap profile="fs25_dialogLineRight" id="topLineRight" position="0 45px" />
+      <Text profile="fs25_dialogTitle" id="headerText" text="$l10n_vehiclePresets_dialogTitle" position="0 60px" />
+
+      <!-- Save Current Config Button -->
+      <Button profile="vehiclePresetsSaveButtonContainer" id="saveButton" onClick="onClickSave">
+        <ThreePartBitmap profile="vehiclePresetsSaveButtonBg" />
+        <Bitmap profile="vehiclePresetsSaveButtonIcon" />
+        <Text profile="vehiclePresetsSaveButtonText" text="$l10n_vehiclePresets_saveCurrentConfig" />
+      </Button>
+
+      <ThreePartBitmap profile="fs25_lineSeparatorTopHighlighted" position="0 -86px" absoluteSizeOffset="55px 0" height="1dp" />
+
+      <!-- List Container -->
+      <GuiElement profile="vehiclePresetsListContainer">
+        <Text profile="vehiclePresetsEmptyText" id="emptyText" text="$l10n_vehiclePresets_noPresetsInfo" />
+
+        <!-- Presets List -->
+        <SmoothList profile="vehiclePresetsPresetsList" id="presetsList" onDoubleClick="onDoubleClickPreset">
+          <ListItem profile="vehiclePresetsPresetsListItem">
+            <ThreePartBitmap profile="vehiclePresetsPresetsListItemBg" name="alternating" />
+            <Text profile="vehiclePresetsPresetsListItemName" name="name" />
+            <Text profile="vehiclePresetsPresetsListItemCurrent" name="current" text="$l10n_vehiclePresets_current" />
+            <Text profile="vehiclePresetsPresetsListItemPrice" name="price" />
+          </ListItem>
+        </SmoothList>
+
+        <ThreePartBitmap profile="vehiclePresetsListSliderBox">
+          <Slider profile="fs25_listSlider" dataElementId="presetsList" />
+        </ThreePartBitmap>
+      </GuiElement>
+    </GuiElement>
+
+    <!-- Footer Buttons -->
+    <BoxLayout profile="fs25_dialogButtonBox" id="buttonsBox">
+      <Button profile="buttonCancel" id="deleteButton" text="$l10n_vehiclePresets_deletePreset" onClick="onClickDelete">
+        <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+      </Button>
+      <Button profile="buttonExtra1" id="overwriteButton" text="$l10n_vehiclePresets_overwrite" onClick="onClickOverwrite">
+        <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+      </Button>
+      <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="backButton">
+        <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+      </Button>
+      <Button profile="buttonOK" text="$l10n_vehiclePresets_loadSelected" onClick="onClickLoad" id="loadButton" />
+    </BoxLayout>
+  </GuiElement>
+
+  <GUIProfiles>
+    <Profile name="vehiclePresetsDialogContainer" extends="emptyPanel" with="anchorBottomCenter">
+      <position value="0 60px" />
+      <size value="700px 420px" />
+    </Profile>
+
+    <!-- Save Button -->
+    <Profile name="vehiclePresetsSaveButtonContainer" extends="emptyPanel" with="anchorTopCenter">
+      <position value="0 -25px" />
+      <size value="620px 50px" />
+      <textAlignment value="right" />
+      <textOffset value="-20px 0" />
+      <iconSize value="18px 18px" />
+      <iconColor value="$preset_fs25_colorMainHighlight" />
+      <iconFocusedColor value="$preset_fs25_colorMainDark" />
+      <iconSelectedColor value="$preset_fs25_colorMainDark" />
+      <iconDisabledColor value="$preset_colorDisabled" />
+      <iconBgColor value="$preset_fs25_colorGreenDark" />
+      <iconBgFocusedColor value="$preset_fs25_colorMainHighlight" />
+      <iconBgSelectedColor value="$preset_fs25_colorMainHighlight" />
+      <iconBgDisabledColor value="$preset_colorTransparent" />
+      <inputAction value="MENU_ACTIVATE" />
+    </Profile>
+    <Profile name="vehiclePresetsSaveButtonBg" extends="baseReference" with="anchorStretchingYStretchingX">
+      <imageColor value="$preset_fs25_colorMainDark_90" />
+      <imageHighlightedColor value="$preset_fs25_colorMainDark" />
+      <imageSliceId value="gui.button_middle" />
+      <startImageSize value="6px 0" />
+      <startImageSliceId value="gui.button_left" />
+      <startImageHighlightedColor value="$preset_fs25_colorMainDark" />
+      <endImageSize value="6px 0" />
+      <endImageSliceId value="gui.button_right" />
+      <endImageHighlightedColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+    <Profile name="vehiclePresetsSaveButtonIcon" extends="baseReference" with="anchorMiddleLeft">
+      <position value="20px 0" />
+      <size value="20px 20px" />
+      <imageSliceId value="gui.plus" />
+      <imageColor value="$preset_fs25_colorMainHighlight" />
+      <imageDisabledColor value="$preset_colorDisabled" />
+    </Profile>
+    <Profile name="vehiclePresetsSaveButtonText" extends="fs25_textDefault" with="anchorMiddleLeft">
+      <position value="55px 0" />
+      <size value="400px 30px" />
+      <textAlignment value="left" />
+      <textBold value="true" />
+      <textSize value="17px" />
+      <textUpperCase value="true" />
+    </Profile>
+
+    <!-- Preset List -->
+    <Profile name="vehiclePresetsListContainer" extends="emptyPanel" with="anchorBottomCenter">
+      <position value="5px 20px" />
+      <size value="620px 220px" />
+    </Profile>
+    <Profile name="vehiclePresetsEmptyText" extends="fs25_textDefault" with="anchorMiddleCenter">
+      <size value="500px 40px" />
+      <textAlignment value="center" />
+      <textSize value="17px" />
+      <textColor value="$preset_fs25_colorGreyText" />
+    </Profile>
+    <Profile name="vehiclePresetsPresetsList" extends="emptyPanel" with="anchorStretchingYStretchingX pivotTopCenter">
+      <position value="-15px 0" />
+      <absoluteSizeOffset value="-30px 0" />
+      <itemizedScrollDelta value="3" />
+    </Profile>
+    <Profile name="vehiclePresetsListSliderBox" extends="fs25_listSliderBox" with="anchorStretchingYRight">
+      <position value="10px 0" />
+    </Profile>
+
+    <!-- List Items -->
+    <Profile name="vehiclePresetsPresetsListItem" extends="baseReference" with="anchorTopStretchingX">
+      <height value="50px" />
+      <alternateChildren value="true" />
+      <imageSliceId value="gui.empty" />
+      <imageColor value="$preset_fs25_colorGreyListItem" />
+      <alternateBackgroundColor value="$preset_colorTransparent" />
+    </Profile>
+    <Profile name="vehiclePresetsPresetsListItemBg" extends="baseReference" with="anchorStretchingYStretchingX">
+      <imageSelectedColor value="$preset_fs25_colorMainHighlight" />
+      <startImageSize value="100px 30px" />
+      <startImageSliceId value="gui.list_gradient" />
+      <startImageSelectedColor value="$preset_fs25_colorMainHighlight" />
+      <endImageSize value="100px 30px" />
+      <endImageSliceId value="gui.list_gradient" />
+      <endImageSelectedColor value="$preset_fs25_colorMainHighlight" />
+      <endImageInvertX value="true" />
+    </Profile>
+    <Profile name="vehiclePresetsPresetsListItemName" extends="fs25_textDefault" with="anchorMiddleLeft">
+      <position value="40px 0" />
+      <size value="300px 30px" />
+      <textBold value="true" />
+      <textAlignment value="left" />
+      <textSize value="18px" />
+      <textSelectedColor value="$preset_fs25_colorMainDark" />
+      <textFocusedColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+    <Profile name="vehiclePresetsPresetsListItemCurrent" extends="fs25_textDefault" with="anchorMiddleRight">
+      <position value="-165px 0" />
+      <size value="140px 30px" />
+      <textAlignment value="right" />
+      <textSize value="16px" />
+      <textUpperCase value="true" />
+      <textColor value="$preset_fs25_colorMainHighlight" />
+      <textSelectedColor value="$preset_fs25_colorMainDark" />
+      <textFocusedColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+    <Profile name="vehiclePresetsPresetsListItemPrice" extends="fs25_textDefault" with="anchorMiddleRight">
+      <position value="-40px 0" />
+      <width value="120px" />
+      <textAlignment value="right" />
+      <textSize value="16px" />
+      <textBold value="true" />
+      <textColor value="$preset_fs25_colorMainHighlight" />
+      <textSelectedColor value="$preset_fs25_colorMainDark" />
+      <textHighlightedColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+  </GUIProfiles>
+</GUI>

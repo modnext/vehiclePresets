@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="Förinställ. Fordon" />
+    <e k="vehiclePresets_presetName" v="Namn förinställning" />
+    <e k="vehiclePresets_presets" v="Förinställningar" />
+    <e k="vehiclePresets_preset" v="Förinställning" />
+    <e k="vehiclePresets_current" v="Nuvarande" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="Spara förinställning" />
+    <e k="vehiclePresets_saveCurrentConfig" v="Spara akt. konfiguration" />
+    <e k="vehiclePresets_loadSelected" v="Ladda" />
+    <e k="vehiclePresets_deletePreset" v="Ta bort" />
+    <e k="vehiclePresets_overwrite" v="Skriv över" />
+    <e k="vehiclePresets_openInShop" v="Öppna" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="Inga förinställningar sparade än" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="Inga förinställningar sparade för något fordon" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="Ta bort förinställning '%s'?" />
+    <e k="vehiclePresets_overwriteConfirm" v="Skriva över förinställning '%s' med aktuell configuration?" />
+  </elements>
+</l10n>

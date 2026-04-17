@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="Voertuigvoorinstellingen" />
+    <e k="vehiclePresets_presetName" v="Voorinstellingsnaam" />
+    <e k="vehiclePresets_presets" v="Voorinstellingen" />
+    <e k="vehiclePresets_preset" v="Voorinstelling" />
+    <e k="vehiclePresets_current" v="Huidig" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="Voorinstelling opslaan" />
+    <e k="vehiclePresets_saveCurrentConfig" v="Huidige config opslaan" />
+    <e k="vehiclePresets_loadSelected" v="Laden" />
+    <e k="vehiclePresets_deletePreset" v="Verwijderen" />
+    <e k="vehiclePresets_overwrite" v="Overschrijven" />
+    <e k="vehiclePresets_openInShop" v="Openen" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="Nog geen voorinstellingen opgeslagen" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="Geen voorinstellingen opgeslagen voor enig voertuig" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="Voorinstelling '%s' verwijderen?" />
+    <e k="vehiclePresets_overwriteConfirm" v="Voorinstelling '%s' overschrijven met huidige configuratie?" />
+  </elements>
+</l10n>

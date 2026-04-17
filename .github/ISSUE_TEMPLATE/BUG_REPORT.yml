@@ -1,0 +1,39 @@
+name: 🐛 Bug Report
+description: Report a bug in the software
+labels:
+  - bug
+assignees:
+  - aaw3k
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+        Please make sure to [search for existing issues](https://github.com/modnext/vehiclePresets/issues) before filing a new one!
+
+  - type: dropdown
+    id: mod-version
+    attributes:
+      label: Version
+      description: Select the version of the modification where you encountered the issue.
+      options:
+        - 1.0.0.0
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. File path ("C:\\Users\\<USER_NAME>\\Documents\\My Games\\FarmingSimulator2025\\log.txt"). You can also paste the entire log on [pastebin.com](https://pastebin.com) and share the link.
+      render: shell

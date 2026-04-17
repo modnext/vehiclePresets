@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="Fahrzeug-Vorlagen" />
+    <e k="vehiclePresets_presetName" v="Vorlagenname" />
+    <e k="vehiclePresets_presets" v="Vorlagen" />
+    <e k="vehiclePresets_preset" v="Vorlage" />
+    <e k="vehiclePresets_current" v="Aktuell" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="Vorlage speichern" />
+    <e k="vehiclePresets_saveCurrentConfig" v="Aktuelle Konfig. speichern" />
+    <e k="vehiclePresets_loadSelected" v="Laden" />
+    <e k="vehiclePresets_deletePreset" v="Löschen" />
+    <e k="vehiclePresets_overwrite" v="Überschreiben" />
+    <e k="vehiclePresets_openInShop" v="Öffnen" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="Noch keine Vorlagen gespeichert" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="Keine Vorlagen für ein Fahrzeug gespeichert" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="Vorlage '%s' löschen?" />
+    <e k="vehiclePresets_overwriteConfirm" v="Vorlage '%s' mit aktueller Konfiguration überschreiben?" />
+  </elements>
+</l10n>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="Konfiguracje Pojazdu" />
+    <e k="vehiclePresets_presetName" v="Nazwa Konfiguracji" />
+    <e k="vehiclePresets_presets" v="Konfiguracje" />
+    <e k="vehiclePresets_preset" v="Konfiguracja" />
+    <e k="vehiclePresets_current" v="Aktualna" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="Zapisz Konfigurację" />
+    <e k="vehiclePresets_saveCurrentConfig" v="Zapisz Akt. Ust." />
+    <e k="vehiclePresets_loadSelected" v="Wczytaj" />
+    <e k="vehiclePresets_deletePreset" v="Usuń" />
+    <e k="vehiclePresets_overwrite" v="Nadpisz" />
+    <e k="vehiclePresets_openInShop" v="Otwórz" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="Brak zapisanych opcji" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="Brak konfiguracji dla jakiegokolwiek pojazdu" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="Usunąć konfigurację '%s'?" />
+    <e k="vehiclePresets_overwriteConfirm" v="Nadpisać konfigurację '%s' aktualnymi ustawieniami?" />
+  </elements>
+</l10n>

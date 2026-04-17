@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="Préréglages Véhicule" />
+    <e k="vehiclePresets_presetName" v="Nom du préréglage" />
+    <e k="vehiclePresets_presets" v="Préréglages" />
+    <e k="vehiclePresets_preset" v="Préréglage" />
+    <e k="vehiclePresets_current" v="Actuel" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="Enregistrer Préréglage" />
+    <e k="vehiclePresets_saveCurrentConfig" v="Enregistrer Config. Actuelle" />
+    <e k="vehiclePresets_loadSelected" v="Charger" />
+    <e k="vehiclePresets_deletePreset" v="Supprimer" />
+    <e k="vehiclePresets_overwrite" v="Écraser" />
+    <e k="vehiclePresets_openInShop" v="Ouvrir" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="Aucun préréglage enregistré pour l'instant" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="Aucun préréglage enregistré pour un véhicule" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="Supprimer le préréglage '%s' ?" />
+    <e k="vehiclePresets_overwriteConfirm" v="Écraser le préréglage '%s' avec la config. actuelle ?" />
+  </elements>
+</l10n>

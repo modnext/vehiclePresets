@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="Ajustes de Veículo" />
+    <e k="vehiclePresets_presetName" v="Nome do Ajuste" />
+    <e k="vehiclePresets_presets" v="Ajustes" />
+    <e k="vehiclePresets_preset" v="Ajuste" />
+    <e k="vehiclePresets_current" v="Atual" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="Guardar Ajuste" />
+    <e k="vehiclePresets_saveCurrentConfig" v="Guardar Config. Atual" />
+    <e k="vehiclePresets_loadSelected" v="Carregar" />
+    <e k="vehiclePresets_deletePreset" v="Eliminar" />
+    <e k="vehiclePresets_overwrite" v="Substituir" />
+    <e k="vehiclePresets_openInShop" v="Abrir" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="Nenhum ajuste guardado ainda" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="Nenhum ajuste guardado para qualquer veículo" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="Eliminar ajuste '%s'?" />
+    <e k="vehiclePresets_overwriteConfirm" v="Substituir ajuste '%s' com configuração atual?" />
+  </elements>
+</l10n>

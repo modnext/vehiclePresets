@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="Kjøretøyforhåndsinnst." />
+    <e k="vehiclePresets_presetName" v="Forhåndsinnstilling Navn" />
+    <e k="vehiclePresets_presets" v="Forhåndsinnstillinger" />
+    <e k="vehiclePresets_preset" v="Forhåndsinnstilling" />
+    <e k="vehiclePresets_current" v="Nåværende" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="Lagre Forhåndsinnst." />
+    <e k="vehiclePresets_saveCurrentConfig" v="Lagre Nåv. Konfig." />
+    <e k="vehiclePresets_loadSelected" v="Last inn" />
+    <e k="vehiclePresets_deletePreset" v="Slett" />
+    <e k="vehiclePresets_overwrite" v="Overskriv" />
+    <e k="vehiclePresets_openInShop" v="Åpne" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="Ingen forhåndsinnst. lagret ennå" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="Ingen forhåndsinnstillinger lagret for noe kjøretøy" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="Slett forhåndsinnstilling '%s'?" />
+    <e k="vehiclePresets_overwriteConfirm" v="Overskriv forhåndsinnst. '%s' med nåværende konfig.?" />
+  </elements>
+</l10n>

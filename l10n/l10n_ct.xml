@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="車輛預設" />
+    <e k="vehiclePresets_presetName" v="預設名稱" />
+    <e k="vehiclePresets_presets" v="預設" />
+    <e k="vehiclePresets_preset" v="預設" />
+    <e k="vehiclePresets_current" v="當前" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="保存預設" />
+    <e k="vehiclePresets_saveCurrentConfig" v="保存當前配置" />
+    <e k="vehiclePresets_loadSelected" v="載入" />
+    <e k="vehiclePresets_deletePreset" v="刪除" />
+    <e k="vehiclePresets_overwrite" v="覆蓋" />
+    <e k="vehiclePresets_openInShop" v="打開" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="尚未保存任何預設" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="沒有為任何車輛保存預設" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="要刪除預設「%s」嗎？" />
+    <e k="vehiclePresets_overwriteConfirm" v="要使用當前配置覆蓋預設「%s」嗎？" />
+  </elements>
+</l10n>

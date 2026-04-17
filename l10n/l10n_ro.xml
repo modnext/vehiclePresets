@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="Presetări Vehicul" />
+    <e k="vehiclePresets_presetName" v="Nume Presetare" />
+    <e k="vehiclePresets_presets" v="Presetări" />
+    <e k="vehiclePresets_preset" v="Presetare" />
+    <e k="vehiclePresets_current" v="Curent" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="Salvează Presetarea" />
+    <e k="vehiclePresets_saveCurrentConfig" v="Salvează Config Curentă" />
+    <e k="vehiclePresets_loadSelected" v="Încarcă" />
+    <e k="vehiclePresets_deletePreset" v="Șterge" />
+    <e k="vehiclePresets_overwrite" v="Suprascrie" />
+    <e k="vehiclePresets_openInShop" v="Deschide" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="Nu există presetări salvate încă" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="Nicio presetare salvată pentru vreun vehicul" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="Șterge presetarea '%s'?" />
+    <e k="vehiclePresets_overwriteConfirm" v="Suprascrie presetarea '%s' cu configurația curentă?" />
+  </elements>
+</l10n>

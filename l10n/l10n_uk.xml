@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<l10n>
+  <elements>
+    <!-- General UI -->
+    <e k="vehiclePresets_dialogTitle" v="Пресети техніки" />
+    <e k="vehiclePresets_presetName" v="Назва пресету" />
+    <e k="vehiclePresets_presets" v="Пресети" />
+    <e k="vehiclePresets_preset" v="Пресет" />
+    <e k="vehiclePresets_current" v="Поточний" />
+
+    <!-- Actions -->
+    <e k="vehiclePresets_savePreset" v="Зберегти пресет" />
+    <e k="vehiclePresets_saveCurrentConfig" v="Зберегти поточну конф." />
+    <e k="vehiclePresets_loadSelected" v="Завантажити" />
+    <e k="vehiclePresets_deletePreset" v="Видалити" />
+    <e k="vehiclePresets_overwrite" v="Перезаписати" />
+    <e k="vehiclePresets_openInShop" v="Відкрити" />
+
+    <!-- Notifications & Info -->
+    <e k="vehiclePresets_noPresetsInfo" v="Ще немає збережених пресетів" />
+    <e k="vehiclePresets_noPresetsAnywhere" v="Немає збережених пресетів для жодної техніки" />
+
+    <!-- Warnings & Dialogs -->
+    <e k="vehiclePresets_deleteConfirm" v="Видалити пресет '%s'?" />
+    <e k="vehiclePresets_overwriteConfirm" v="Перезаписати пресет '%s' поточною конфігурацією?" />
+  </elements>
+</l10n>
