@@ -184,7 +184,7 @@ local function updateButtons(self, superFunc, storeItem, vehicle, saleItem)
 
     self.presetsButton:setText(g_i18n:getText("vehiclePresets_dialogTitle"))
     self.presetsButton:applyProfile(ShopConfigScreen.GUI_PROFILE.BUTTON_BUY)
-    self.presetsButton:setInputAction(InputAction.MENU_EXTRA_1)
+    self.presetsButton:setInputAction(InputAction.VEHICLE_PRESETS)
     self.presetsButton.onClickCallback = function()
       ShopConfigScreenExtension.onOpenPresetsDialog(self)
     end
@@ -215,6 +215,16 @@ end
 
 ---
 ShopConfigScreen.updateButtons = Utils.overwrittenFunction(ShopConfigScreen.updateButtons, updateButtons)
+
+---Register custom action in ShopConfigScreen input context
+local function registerInputActionsAppended(self)
+  g_inputBinding:registerActionEvent(InputAction.VEHICLE_PRESETS, self, function()
+    ShopConfigScreenExtension.onOpenPresetsDialog(self)
+  end, false, true, false, true)
+end
+
+---
+ShopConfigScreen.registerInputActions = Utils.appendedFunction(ShopConfigScreen.registerInputActions, registerInputActionsAppended)
 
 ---Save data when preview vehicles are deleted called from onClose
 local function deletePreviewVehiclesAppended(self)
