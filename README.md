@@ -38,8 +38,8 @@
 
 | Key         | Context                        | Action                                                                   |
 | ----------- | ------------------------------ | ------------------------------------------------------------------------ |
-| `X`         | Store Pages                    | Open the "All Presets" browser directly                                  |
-| `X`         | Shop Configuration Screen      | Open the "Presets" dialog to save, load, overwrite, or delete presets    |
+| `V`         | Store Pages                    | Open the "All Presets" browser directly                                  |
+| `V`         | Shop Configuration Screen      | Open the "Presets" dialog to save, load, overwrite, or delete presets    |
 
 ## Screenshots
 
