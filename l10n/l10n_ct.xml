@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <l10n>
   <elements>
+    <!-- Input Actions -->
+    <e k="input_VEHICLE_PRESETS" v="開啟預設" />
+
     <!-- General UI -->
     <e k="vehiclePresets_dialogTitle" v="車輛預設" />
     <e k="vehiclePresets_presetName" v="預設名稱" />

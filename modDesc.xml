@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="107">
+<modDesc descVersion="108">
   <author>aaw3k</author>
-  <version>1.0.0.0</version>
+  <version>1.0.1.0</version>
 
   <title>
     <en>Vehicle Presets</en>
@@ -23,8 +23,11 @@ Features:
 - Automatically removes presets for uninstalled mod vehicles.
 
 Hotkeys:
-- Press 'X' to open the "All Presets" browser directly from the store pages.
-- Press 'X' to open the "Presets" dialog in the shop configuration screen.
+- Press 'V' to open the "All Presets" browser directly from the store pages.
+- Press 'V' to open the "Presets" dialog in the shop configuration screen.
+
+Changelog Version 1.0.1.0:
+- Added ability to change the keybind for opening preset dialogs.
 
 For more info, bug reports, or to contribute, check out GitHub (modnext/vehiclePresets).
 ]]></en>
@@ -39,8 +42,11 @@ Funktionen:
 - Entfernt automatisch Presets für deinstallierte Mod-Fahrzeuge.
 
 Tastenkombinationen:
-- Drücke 'X', um den "Alle Presets"-Browser direkt aus dem Menü zu öffnen.
-- Drücke 'X', um den "Presets"-Dialog im Shop-Konfigurationsbildschirm zu öffnen.
+- Drücke 'V', um den "Alle Presets"-Browser direkt aus dem Menü zu öffnen.
+- Drücke 'V', um den "Presets"-Dialog im Shop-Konfigurationsbildschirm zu öffnen.
+
+Changelog Version 1.0.1.0:
+- Möglichkeit hinzugefügt, die Tastenbelegung zum Öffnen der Preset-Dialoge zu ändern.
 
 Für mehr Infos, Fehlermeldungen oder kleine Beiträge schau einfach auf GitHub vorbei (modnext/vehiclePresets).
 ]]></de>
@@ -55,8 +61,11 @@ Fonctionnalités :
 - Supprime automatiquement les préréglages des véhicules de mods désinstallés.
 
 Raccourcis clavier :
-- Appuyez sur 'X' pour ouvrir le navigateur "Préréglages" directement depuis les pages de la boutique.
-- Appuyez sur 'X' pour ouvrir la boîte de dialogue "Préréglages" dans l'écran de configuration.
+- Appuyez sur 'V' pour ouvrir le navigateur "Préréglages" directement depuis les pages de la boutique.
+- Appuyez sur 'V' pour ouvrir la boîte de dialogue "Préréglages" dans l'écran de configuration.
+
+Changelog Version 1.0.1.0 :
+- Ajout de la possibilité de modifier la touche pour ouvrir les dialogues de préréglages.
 
 Pour plus d'infos, signaler un bug ou apporter votre aide, rendez-vous sur GitHub (modnext/vehiclePresets).
 ]]></fr>
@@ -71,8 +80,11 @@ Funkcje:
 - Automatycznie usuwa presety dla pojazdów z odinstalowanych modów.
 
 Skróty klawiszowe:
-- Wciśnij 'X', aby otworzyć przeglądarkę "Wszystkich Presetów" prosto ze stron sklepu.
-- Wciśnij 'X', aby otworzyć okno presetów w ekranie konfiguracji pojazdu.
+- Wciśnij 'V', aby otworzyć przeglądarkę "Wszystkich Presetów" prosto ze stron sklepu.
+- Wciśnij 'V', aby otworzyć okno presetów w ekranie konfiguracji pojazdu.
+
+Changelog Version 1.0.1.0:
+- Dodano możliwość zmiany klawisza do otwierania okien presetów.
 
 Więcej informacji, zgłaszanie błędów czy pomoc w rozwoju znajdziecie na moim GitHubie (modnext/vehiclePresets).
 ]]></pl>
@@ -86,8 +98,11 @@ Więcej informacji, zgłaszanie błędów czy pomoc w rozwoju znajdziecie na moi
 - Автоматически удаляет пресеты для техники из удаленных модов.
 
 Горячие клавиши:
-- Нажмите «X», чтобы открыть браузер «Все пресеты» прямо со страниц магазина.
-- Нажмите «X», чтобы открыть диалоговое окно «Пресеты» на экране конфигурации.
+- Нажмите «V», чтобы открыть браузер «Все пресеты» прямо со страниц магазина.
+- Нажмите «V», чтобы открыть диалоговое окно «Пресеты» на экране конфигурации.
+
+Changelog Version 1.0.1.0:
+- Добавлена возможность изменить клавишу для открытия диалогов пресетов.
 
 Для получения дополнительной информации, сообщений об ошибках или участия загляните на GitHub (modnext/vehiclePresets).
 ]]></ru>
@@ -105,4 +120,14 @@ Więcej informacji, zgłaszanie błędów czy pomoc w rozwoju znajdziecie na moi
     <sourceFile filename="scripts/extensions/ShopConfigScreenExtension.lua" />
     <sourceFile filename="scripts/extensions/ShopMenuExtension.lua" />
   </extraSourceFiles>
+
+  <actions>
+    <action name="VEHICLE_PRESETS" axisType="HALF" displayCategory="MENU" />
+  </actions>
+
+  <inputBinding>
+    <actionBinding action="VEHICLE_PRESETS">
+      <binding device="KB_MOUSE_DEFAULT" input="KEY_v" />
+    </actionBinding>
+  </inputBinding>
 </modDesc>

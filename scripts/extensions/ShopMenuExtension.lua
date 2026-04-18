@@ -42,7 +42,7 @@ local function ensurePresetsButton(self)
   end
 
   self.vehiclePresetsButtonInfo = {
-    inputAction = InputAction.MENU_EXTRA_1,
+    inputAction = InputAction.VEHICLE_PRESETS,
     text = g_i18n:getText("vehiclePresets_presets"),
     callback = self:makeSelfCallback(ShopMenuExtension.onButtonVehiclePresets)
   }

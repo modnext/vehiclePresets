@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <l10n>
   <elements>
+    <!-- Input Actions -->
+    <e k="input_VEHICLE_PRESETS" v="" />
+
     <!-- General UI -->
     <e k="vehiclePresets_dialogTitle" v="" />
     <e k="vehiclePresets_presetName" v="" />
