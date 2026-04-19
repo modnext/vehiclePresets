@@ -102,21 +102,8 @@ function VehiclePresetsSystem:resolveStorageKeys()
     end
 
     if runtimeKey ~= nil then
-      if resolvedVehicles[runtimeKey] == nil then
-        resolvedVehicles[runtimeKey] = presets
-        resolvedIds[runtimeKey] = self.vehicleIds[key]
-      else
-        for _, preset in ipairs(presets) do
-          if #resolvedVehicles[runtimeKey] < VehiclePresetsSystem.MAX_PRESETS_PER_VEHICLE then
-            table.insert(resolvedVehicles[runtimeKey], preset)
-          end
-        end
-
-        local existingId = resolvedIds[runtimeKey] or 0
-        local newId = self.vehicleIds[key] or 0
-        resolvedIds[runtimeKey] = math.max(existingId, newId)
-        self:markDirty()
-      end
+      resolvedVehicles[runtimeKey] = presets
+      resolvedIds[runtimeKey] = self.vehicleIds[key]
 
       local storeItem = g_storeManager:getItemByXMLFilename(runtimeKey)
 
