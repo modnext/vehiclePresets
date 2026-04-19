@@ -196,24 +196,23 @@ function VehiclePresetsSystem:getAllVehiclesWithPresets()
   for xmlFilename, presets in pairs(self.vehicles) do
     if #presets > 0 then
       local storeItem = g_storeManager:getItemByXMLFilename(xmlFilename)
-      local vehicleName = xmlFilename
-      local imageFilename = nil
 
+      -- skip vehicles from removed mods or dlcs
       if storeItem ~= nil then
-        vehicleName = storeItem.name or xmlFilename
-        imageFilename = storeItem.imageFilename
-      end
+        local vehicleName = storeItem.name or xmlFilename
+        local imageFilename = storeItem.imageFilename
 
-      for i, preset in ipairs(presets) do
-        table.insert(result, {
-          xmlFilename = xmlFilename,
-          vehicleName = vehicleName,
-          imageFilename = imageFilename,
-          presetIndex = i,
-          presetName = preset.name,
-          configurations = preset.configurations,
-          configurationData = preset.configurationData
-        })
+        for i, preset in ipairs(presets) do
+          table.insert(result, {
+            xmlFilename = xmlFilename,
+            vehicleName = vehicleName,
+            imageFilename = imageFilename,
+            presetIndex = i,
+            presetName = preset.name,
+            configurations = preset.configurations,
+            configurationData = preset.configurationData
+          })
+        end
       end
     end
   end
@@ -239,21 +238,20 @@ function VehiclePresetsSystem:getVehiclesWithPresetCounts()
   for xmlFilename, presets in pairs(self.vehicles) do
     if #presets > 0 then
       local storeItem = g_storeManager:getItemByXMLFilename(xmlFilename)
-      local vehicleName = xmlFilename
-      local imageFilename = nil
 
+      -- skip vehicles from removed mods or dlcs
       if storeItem ~= nil then
-        vehicleName = storeItem.name or xmlFilename
-        imageFilename = storeItem.imageFilename
-      end
+        local vehicleName = storeItem.name or xmlFilename
+        local imageFilename = storeItem.imageFilename
 
-      table.insert(result, {
-        xmlFilename = xmlFilename,
-        vehicleName = vehicleName,
-        imageFilename = imageFilename,
-        presetCount = #presets,
-        vehicleId = self.vehicleIds[xmlFilename] or 0,
-      })
+        table.insert(result, {
+          xmlFilename = xmlFilename,
+          vehicleName = vehicleName,
+          imageFilename = imageFilename,
+          presetCount = #presets,
+          vehicleId = self.vehicleIds[xmlFilename] or 0,
+        })
+      end
     end
   end
 
