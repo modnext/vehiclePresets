@@ -22,6 +22,7 @@ function VehiclePresetsSystem.new()
   self.nextVehicleId = 1
 
   self.isDirty = false
+  self.isResolved = false
   self.hasSyncedThisSession = false
 
   -- load data from xml file
@@ -35,10 +36,104 @@ function VehiclePresetsSystem:markDirty()
   self.isDirty = true
 end
 
+---Extract relative storage key from an absolute xmlFilename
+-- @param string xmlFilename absolute or relative xml filename
+-- @return string|nil storageKey relative path preserving original case
+function VehiclePresetsSystem.toStorageKey(xmlFilename)
+  if xmlFilename == nil then
+    return nil
+  end
+
+  local normalized = xmlFilename:gsub("\\", "/")
+  local lower = string.lower(normalized)
+
+  local pos = lower:find("fs25_")
+
+  if pos == nil then
+    pos = lower:find("pdlc/")
+  end
+
+  if pos == nil then
+    pos = lower:find("data/")
+  end
+
+  if pos ~= nil then
+    return normalized:sub(pos)
+  end
+
+  return normalized
+end
+
+---Ensure storage keys are resolved to current runtime paths
+-- Runs resolution exactly once per session on first access
+function VehiclePresetsSystem:ensureResolved()
+  if self.isResolved then
+    return
+  end
+
+  self.isResolved = true
+  self:resolveStorageKeys()
+end
+
+---Resolve storage keys to current runtime absolute paths
+-- Migrates mod-relative and old absolute keys to current xmlFilenames
+function VehiclePresetsSystem:resolveStorageKeys()
+  local storageKeyToXml = {}
+
+  if g_storeManager.xmlFilenameToItem ~= nil then
+    for xmlFilename, _ in pairs(g_storeManager.xmlFilenameToItem) do
+      local storageKey = string.lower(VehiclePresetsSystem.toStorageKey(xmlFilename))
+      storageKeyToXml[storageKey] = xmlFilename
+    end
+  end
+
+  local resolvedVehicles = {}
+  local resolvedIds = {}
+
+  for key, presets in pairs(self.vehicles) do
+    local runtimeKey = nil
+    local storageKey = string.lower(VehiclePresetsSystem.toStorageKey(key))
+
+    if g_storeManager:getItemByXMLFilename(key) ~= nil then
+      runtimeKey = string.lower(key)
+    elseif storageKeyToXml[storageKey] ~= nil then
+      runtimeKey = string.lower(storageKeyToXml[storageKey])
+    end
+
+    if runtimeKey ~= nil then
+      resolvedVehicles[runtimeKey] = presets
+      resolvedIds[runtimeKey] = self.vehicleIds[key]
+
+      local storeItem = g_storeManager:getItemByXMLFilename(runtimeKey)
+
+      if storeItem ~= nil then
+        for _, preset in ipairs(resolvedVehicles[runtimeKey]) do
+          preset.xmlFilename = storeItem.xmlFilename
+        end
+      end
+    else
+      resolvedVehicles[key] = presets
+      resolvedIds[key] = self.vehicleIds[key]
+    end
+  end
+
+  for key, _ in pairs(self.vehicles) do
+    if resolvedVehicles[key] == nil then
+      self:markDirty()
+      break
+    end
+  end
+
+  self.vehicles = resolvedVehicles
+  self.vehicleIds = resolvedIds
+end
+
 ---Get all presets for a specific vehicle
 -- @param string xmlFilename vehicle xml filename identifier
 -- @return table presets list of preset entries
 function VehiclePresetsSystem:getPresetsForVehicle(xmlFilename)
+  self:ensureResolved()
+
   if xmlFilename == nil then
     return {}
   end
@@ -360,29 +455,14 @@ function VehiclePresetsSystem:renamePreset(xmlFilename, presetIndex, newName)
   self:markDirty()
 end
 
----Synchronize presets and remove vehicles belonging to uninstalled mods
+---Synchronize presets with currently loaded mods
 function VehiclePresetsSystem:sync()
   if self.hasSyncedThisSession then
     return
   end
 
   self.hasSyncedThisSession = true
-  local toRemove = {}
-
-  for xmlFilename, _ in pairs(self.vehicles) do
-    local storeItem = g_storeManager:getItemByXMLFilename(xmlFilename)
-
-    if storeItem == nil then
-      table.insert(toRemove, xmlFilename)
-    end
-  end
-
-  for _, xmlFilename in ipairs(toRemove) do
-    self.vehicles[xmlFilename] = nil
-    self.vehicleIds[xmlFilename] = nil
-    self:markDirty()
-  end
-
+  self:ensureResolved()
   self:saveIfDirty()
 end
 
@@ -392,6 +472,7 @@ function VehiclePresetsSystem:loadFromXMLFile()
   self.vehicleIds = {}
   self.nextVehicleId = 1
   self.isDirty = false
+  self.isResolved = false
 
   local xmlFile = XMLFile.loadIfExists("VehiclePresetsXML", modSettingsDirectory .. "presets.xml")
 
@@ -553,7 +634,7 @@ function VehiclePresetsSystem:saveToXMLFile()
         xmlFile:setInt(vehicleKey .. "#id", vehicleId)
       end
 
-      xmlFile:setString(vehicleKey .. "#xmlFilename", presets[1].xmlFilename)
+      xmlFile:setString(vehicleKey .. "#xmlFilename", VehiclePresetsSystem.toStorageKey(presets[1].xmlFilename))
 
       for presetIdx, preset in ipairs(presets) do
         local presetKey = string.format("%s.preset(%d)", vehicleKey, presetIdx - 1)
