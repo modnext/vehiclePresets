@@ -36,16 +36,26 @@ function VehiclePresetsSystem:markDirty()
   self.isDirty = true
 end
 
----Extract mod-relative storage key from an absolute xmlFilename
+---Extract relative storage key from an absolute xmlFilename
 -- @param string xmlFilename absolute or relative xml filename
--- @return string|nil storageKey mod-relative path preserving original case
+-- @return string|nil storageKey relative path preserving original case
 function VehiclePresetsSystem.toStorageKey(xmlFilename)
   if xmlFilename == nil then
     return nil
   end
 
   local normalized = xmlFilename:gsub("\\", "/")
-  local pos = string.lower(normalized):find("fs25_")
+  local lower = string.lower(normalized)
+
+  local pos = lower:find("fs25_")
+
+  if pos == nil then
+    pos = lower:find("pdlc/")
+  end
+
+  if pos == nil then
+    pos = lower:find("data/")
+  end
 
   if pos ~= nil then
     return normalized:sub(pos)
