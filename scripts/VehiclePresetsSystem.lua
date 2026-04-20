@@ -47,15 +47,17 @@ function VehiclePresetsSystem.toStorageKey(xmlFilename)
   local normalized = xmlFilename:gsub("\\", "/")
   local lower = string.lower(normalized)
 
-  local pos = lower:find("fs25_")
+  local pos = lower:match("^.*()/fs25_")
 
-  if pos == nil then
-    pos = lower:find("pdlc/")
+  if pos ~= nil then
+    return normalized:sub(pos + 1)
   end
 
-  if pos == nil then
-    pos = lower:find("data/")
+  if lower:sub(1, 5) == "fs25_" then
+    return normalized
   end
+
+  pos = lower:find("pdlc/") or lower:find("data/")
 
   if pos ~= nil then
     return normalized:sub(pos)
@@ -101,8 +103,31 @@ function VehiclePresetsSystem:resolveStorageKeys()
     end
 
     if runtimeKey ~= nil then
-      resolvedVehicles[runtimeKey] = presets
-      resolvedIds[runtimeKey] = self.vehicleIds[key]
+      if resolvedVehicles[runtimeKey] == nil then
+        resolvedVehicles[runtimeKey] = presets
+        resolvedIds[runtimeKey] = self.vehicleIds[key]
+      else
+        local existingNames = {}
+
+        for _, preset in ipairs(resolvedVehicles[runtimeKey]) do
+          existingNames[preset.name] = true
+        end
+
+        for _, preset in ipairs(presets) do
+          if not existingNames[preset.name] and #resolvedVehicles[runtimeKey] < VehiclePresetsSystem.MAX_PRESETS_PER_VEHICLE then
+            table.insert(resolvedVehicles[runtimeKey], preset)
+          end
+        end
+
+        local existingId = resolvedIds[runtimeKey] or 0
+        local currentId = self.vehicleIds[key] or 0
+
+        if currentId > 0 and (existingId == 0 or currentId < existingId) then
+          resolvedIds[runtimeKey] = currentId
+        end
+
+        self:markDirty()
+      end
 
       local storeItem = g_storeManager:getItemByXMLFilename(runtimeKey)
 
@@ -114,13 +139,6 @@ function VehiclePresetsSystem:resolveStorageKeys()
     else
       resolvedVehicles[key] = presets
       resolvedIds[key] = self.vehicleIds[key]
-    end
-  end
-
-  for key, _ in pairs(self.vehicles) do
-    if resolvedVehicles[key] == nil then
-      self:markDirty()
-      break
     end
   end
 
@@ -486,6 +504,8 @@ function VehiclePresetsSystem:loadFromXMLFile()
       return
     end
 
+    -- normalize to storage key so duplicate paths merge during load
+    xmlFilename = VehiclePresetsSystem.toStorageKey(xmlFilename)
     local key = string.lower(xmlFilename)
     local vehicleId = xmlFile:getInt(vehicleKey .. "#id")
 
@@ -576,6 +596,21 @@ function VehiclePresetsSystem:loadFromXMLFile()
         for i = 1, lpCharacters:len() do
           preset.licensePlateData.characters[i] = lpCharacters:sub(i, i)
         end
+      end
+
+      -- skip duplicate preset names from merged vehicle entries
+      local isDuplicate = false
+
+      for _, existing in ipairs(presets) do
+        if existing.name == name then
+          isDuplicate = true
+          break
+        end
+      end
+
+      if isDuplicate then
+        self.isDirty = true
+        return
       end
 
       table.insert(presets, preset)

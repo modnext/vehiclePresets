@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="108">
   <author>aaw3k</author>
-  <version>1.0.2.0</version>
+  <version>1.0.2.1</version>
 
   <title>
     <en>Vehicle Presets</en>
@@ -25,10 +25,11 @@ Hotkeys:
 - Press 'V' to open the "All Presets" browser directly from the store pages.
 - Press 'V' to open the "Presets" dialog in the shop configuration screen.
 
-Changelog Version 1.0.2.0:
+Changelog Version 1.0.2.1:
+- Fixed presets not being recognized when the mod folder name contains 'FS25_' in its path.
+- Improved preset storage with relative paths to survive mod folder changes (1.0.2.0).
+- Removed automatic deletion of presets for uninstalled mods due to the changes above (1.0.2.0).
 - Added ability to change the keybind for opening preset dialogs (1.0.1.0).
-- Introduced relative save paths, ensuring presets are not deleted when changing the mod folder location.
-- Removed automatic deletion of presets for uninstalled mods due to the changes above.
 
 For more info, bug reports, or to contribute, check out GitHub (modnext/vehiclePresets).
 ]]></en>
@@ -45,10 +46,11 @@ Tastenkombinationen:
 - Drücke 'V', um den "Alle Presets"-Browser direkt aus dem Menü zu öffnen.
 - Drücke 'V', um den "Presets"-Dialog im Shop-Konfigurationsbildschirm zu öffnen.
 
-Changelog Version 1.0.2.0:
+Changelog Version 1.0.2.1:
+- Fehler behoben, bei dem Presets nicht erkannt wurden, wenn der Mod-Ordnername 'FS25_' im Pfad enthielt.
+- Preset-Speicherung mit relativen Pfaden verbessert, um Änderungen am Mod-Ordner standzuhalten (1.0.2.0).
+- Automatisches Löschen von Presets für deinstallierte Mods aufgrund der oben genannten Änderungen entfernt (1.0.2.0).
 - Möglichkeit hinzugefügt, die Tastenbelegung zum Öffnen der Preset-Dialoge zu ändern (1.0.1.0).
-- Relative Speicherpfade eingeführt, wodurch Presets beim Ändern des Mod-Ordner-Speicherorts nicht mehr gelöscht werden.
-- Automatisches Löschen von Presets für deinstallierte Mods aufgrund der oben genannten Änderungen entfernt.
 
 Für mehr Infos, Fehlermeldungen oder kleine Beiträge schau einfach auf GitHub vorbei (modnext/vehiclePresets).
 ]]></de>
@@ -65,10 +67,11 @@ Raccourcis clavier :
 - Appuyez sur 'V' pour ouvrir le navigateur "Préréglages" directement depuis les pages de la boutique.
 - Appuyez sur 'V' pour ouvrir la boîte de dialogue "Préréglages" dans l'écran de configuration.
 
-Changelog Version 1.0.2.0 :
+Changelog Version 1.0.2.1 :
+- Correction des préréglages non reconnus lorsque le nom du dossier de mods contient 'FS25_' dans son chemin.
+- Amélioration du stockage des préréglages avec des chemins relatifs pour résister aux changements de dossier de mods (1.0.2.0).
+- Suppression de l'effacement automatique des préréglages pour les mods désinstallés en raison des changements ci-dessus (1.0.2.0).
 - Ajout de la possibilité de modifier la touche pour ouvrir les dialogues de préréglages (1.0.1.0).
-- Introduction des chemins de sauvegarde relatifs, garantissant que les préréglages ne sont pas supprimés lors du changement d'emplacement du dossier de mods.
-- Suppression de l'effacement automatique des préréglages pour les mods désinstallés en raison des changements ci-dessus.
 
 Pour plus d'infos, signaler un bug ou apporter votre aide, rendez-vous sur GitHub (modnext/vehiclePresets).
 ]]></fr>
@@ -85,10 +88,11 @@ Skróty klawiszowe:
 - Wciśnij 'V', aby otworzyć przeglądarkę "Wszystkich Presetów" prosto ze stron sklepu.
 - Wciśnij 'V', aby otworzyć okno presetów w ekranie konfiguracji pojazdu.
 
-Changelog Version 1.0.2.0:
+Changelog Version 1.0.2.1:
+- Naprawiono presety nierozpoznawane, gdy nazwa folderu z modami zawiera 'FS25_' w ścieżce.
+- Ulepszono zapis presetów ze ścieżkami względnymi, aby przetrwały zmiany folderu z modami (1.0.2.0).
+- Usunięto automatyczne usuwanie presetów dla odinstalowanych modów na skutek powyższych zmian (1.0.2.0).
 - Dodano możliwość zmiany klawisza do otwierania okien presetów (1.0.1.0).
-- Wprowadzono względne ścieżki zapisu, dzięki czemu presety nie usuną się po zmianie lokalizacji folderu z modami.
-- Usunięto automatyczne usuwanie presetów dla odinstalowanych modów na skutek powyższych zmian.
 
 Więcej informacji, zgłaszanie błędów czy pomoc w rozwoju znajdziecie na moim GitHubie (modnext/vehiclePresets).
 ]]></pl>
@@ -104,10 +108,11 @@ Więcej informacji, zgłaszanie błędów czy pomoc w rozwoju znajdziecie na moi
 - Нажмите «V», чтобы открыть браузер «Все пресеты» прямо со страниц магазина.
 - Нажмите «V», чтобы открыть диалоговое окно «Пресеты» на экране конфигурации.
 
-Changelog Version 1.0.2.0:
+Changelog Version 1.0.2.1:
+- Исправлено: пресеты не распознавались, если имя папки с модами содержит 'FS25_' в пути.
+- Улучшено хранение пресетов с относительными путями для сохранности при смене папки с модами (1.0.2.0).
+- Удалено автоматическое удаление пресетов для удалённых модов в связи с вышеуказанными изменениями (1.0.2.0).
 - Добавлена возможность изменить клавишу для открытия диалогов пресетов (1.0.1.0).
-- Введены относительные пути сохранения, благодаря чему пресеты не удаляются при изменении расположения папки с модами.
-- Удалено автоматическое удаление пресетов для удаленных модов в связи с вышеуказанными изменениями.
 
 Для получения дополнительной информации, сообщений об ошибках или участия загляните на GitHub (modnext/vehiclePresets).
 ]]></ru>
