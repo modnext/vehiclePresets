@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="108">
   <author>aaw3k</author>
-  <version>1.0.2.1</version>
+  <version>1.0.2.2</version>
 
   <title>
     <en>Vehicle Presets</en>
@@ -25,6 +25,9 @@ Hotkeys:
 - Press 'V' to open the "All Presets" browser directly from the store pages.
 - Press 'V' to open the "Presets" dialog in the shop configuration screen.
 
+Changelog Version 1.0.2.2:
+- Fixed a game error occurring during save when applying presets with custom colors.
+
 Changelog Version 1.0.2.1:
 - Fixed presets not being recognized when the mod folder name contains 'FS25_' in its path.
 - Improved preset storage with relative paths to survive mod folder changes (1.0.2.0).
@@ -45,6 +48,9 @@ Funktionen:
 Tastenkombinationen:
 - Drücke 'V', um den "Alle Presets"-Browser direkt aus dem Menü zu öffnen.
 - Drücke 'V', um den "Presets"-Dialog im Shop-Konfigurationsbildschirm zu öffnen.
+
+Changelog Version 1.0.2.2:
+- Fehler behoben, der beim Speichern nach der Anwendung von Presets mit benutzerdefinierten Farben auftrat.
 
 Changelog Version 1.0.2.1:
 - Fehler behoben, bei dem Presets nicht erkannt wurden, wenn der Mod-Ordnername 'FS25_' im Pfad enthielt.
@@ -67,6 +73,9 @@ Raccourcis clavier :
 - Appuyez sur 'V' pour ouvrir le navigateur "Préréglages" directement depuis les pages de la boutique.
 - Appuyez sur 'V' pour ouvrir la boîte de dialogue "Préréglages" dans l'écran de configuration.
 
+Changelog Version 1.0.2.2 :
+- Correction d'une erreur de jeu survenant lors de la sauvegarde après l'application de préréglages avec des couleurs personnalisées.
+
 Changelog Version 1.0.2.1 :
 - Correction des préréglages non reconnus lorsque le nom du dossier de mods contient 'FS25_' dans son chemin.
 - Amélioration du stockage des préréglages avec des chemins relatifs pour résister aux changements de dossier de mods (1.0.2.0).
@@ -88,6 +97,9 @@ Skróty klawiszowe:
 - Wciśnij 'V', aby otworzyć przeglądarkę "Wszystkich Presetów" prosto ze stron sklepu.
 - Wciśnij 'V', aby otworzyć okno presetów w ekranie konfiguracji pojazdu.
 
+Changelog Version 1.0.2.2:
+- Naprawiono błąd występujący podczas zapisu po zastosowaniu presetów z niestandardowymi kolorami.
+
 Changelog Version 1.0.2.1:
 - Naprawiono presety nierozpoznawane, gdy nazwa folderu z modami zawiera 'FS25_' w ścieżce.
 - Ulepszono zapis presetów ze ścieżkami względnymi, aby przetrwały zmiany folderu z modami (1.0.2.0).
@@ -107,6 +119,9 @@ Więcej informacji, zgłaszanie błędów czy pomoc w rozwoju znajdziecie na moi
 Горячие клавиши:
 - Нажмите «V», чтобы открыть браузер «Все пресеты» прямо со страниц магазина.
 - Нажмите «V», чтобы открыть диалоговое окно «Пресеты» на экране конфигурации.
+
+Changelog Version 1.0.2.2:
+- Исправлена ошибка, возникающая во время сохранения при применении пресетов с пользовательскими цветами.
 
 Changelog Version 1.0.2.1:
 - Исправлено: пресеты не распознавались, если имя папки с модами содержит 'FS25_' в пути.
