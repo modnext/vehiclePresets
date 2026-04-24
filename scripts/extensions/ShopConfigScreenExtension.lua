@@ -96,8 +96,6 @@ function ShopConfigScreenExtension.applyPreset(self, presetIndex)
   end
 
   -- restore configurationData for custom colors
-  self.configurationData = {}
-
   if preset.configurationData ~= nil then
     for configName, data in pairs(preset.configurationData) do
       if self.configurationData[configName] == nil then
